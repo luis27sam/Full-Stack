@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilos/misestilos.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+	<h1 class="texto">Bienvenidos</h1>
+	<!--
+	<h1>Piensa Digital</h1>
+	<p class="texto">Luis Gabriel Samudio</p>
+	<h2 id="sede">ANDAP</h2>
+	-->
+	<div class="container">
+		<h1 class="texto">Calculadora IVA</h1>
+		<form action="#">
+			<div class="form-group">
+				<label>Precio Producto</label>
+				<input class="form-control" type="number" name="precio" id="precio"> 
+			</div>
+			<div class="form-group">
+				<label>IVA (%)</label>
+				<input class="form-control" type="number" name="iva" id="iva" min="0" max="100">
+			</div>
+			<input type="button" class="btn btn-success" onclick="calcular_iva()" name="calcular" value="calcular">
+
+		</form>
+		<h2>El Iva es:</h2>
+		<input disabled class="form-control" id="resultado" type="text">
+		
+	</div>
+
+
+
+	<script src="scripts/app.js"></script>
+</body>
+</html>

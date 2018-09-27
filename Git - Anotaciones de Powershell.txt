@@ -1,0 +1,525 @@
+CONTROL DE VERSIONES
+
+Powershell
+cmd
+git bash
+Terminal
+
+Comandos:
+
+git init (Inicializo el repositorio)
+git status (muestra estado del repositorio)
+git add (Preparar el archivo)
+git checkout (Volver a los cambios preparados)(Navegar entre commit
+
+git commit (confirmar cambios) ...-m "escribir mesnsaje"
+git diff (veo los cambios que no tengo preparados) --cached (Veo las que ya estan preparados)
+git log (veo la informacion de todas las versiones del commit) -p (Veo la ultima) -2(veo la version solicitada)
+git checkout d37037272e808b7c0e50fc2877cd21ab6cafbb37( Selecciono la version por su id y inicio desde esta nuevamente)
+git remote -v (Subir commit a la nube Github.com)
+git push  (Subir repositorios a la nube) git push origin master
+git clone (Clona un repositorio)
+git pull (descargar cambios que no esten actualizados en mi version local)
+
+_______________________________________________________________________________
+Windows PowerShell
+Copyright (C) 2014 Microsoft Corporation. Todos los derechos reservados.
+
+PS C:\Users\ANDAP> git --version
+git version 2.18.0.windows.1
+PS C:\Users\ANDAP> git config --global user.name
+Arnold
+PS C:\Users\ANDAP> git config --global user.email
+angv@hotmail.es
+PS C:\Users\ANDAP> pwd
+
+Path
+----
+C:\Users\ANDAP
+PS C:\Users\ANDAP> CD desktop
+PS C:\Users\ANDAP\desktop> cd  '.\FULL STACK'
+PS C:\Users\ANDAP\desktop\FULL STACK> cd .\Git
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git init
+Initialized empty Git repository in C:/Users/ANDAP/Desktop/FULL STACK/Git/.git/
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Proyecto con Git.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add <Proyecto con Git>
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add Proyecto con Git.html
+fatal: pathspec 'Proyecto' did not match any files
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add '.\Proyecto con Git.html'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add '.\Proyecto con Git.html'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git checkout
+fatal: You are on a branch yet to be born
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git checkout '.\Proyecto con Git.html'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add '.\Proyecto con Git.html'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add '.\Proyecto con Git.html'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Proyecto con Git.html
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git config --local
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git config --local user.name 'Luis Samudio'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git config --local user.email 'luis27sam@hotmail.com'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git config --local
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git config --local user.name
+Luis Samudio
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git commit -m 'Version Inicial de mi repositorio'
+[master (root-commit) d5049f2] Version Inicial de mi repositorio
+ 1 file changed, 10 insertions(+)
+ create mode 100644 Proyecto con Git.html
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Proyecto con Git.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        estilos.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git commit -m 'Adicion de Hoja de estilos y modificacion de Html'
+On branch master
+Changes not staged for commit:
+        modified:   Proyecto con Git.html
+
+Untracked files:
+        estilos.css
+
+no changes added to commit
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add .
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add .
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Proyecto con Git.html
+        new file:   estilos.css
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git commit -m 'Adicion de archivo de estilos y con css'
+[master d370372] Adicion de archivo de estilos y con css
+ 2 files changed, 2 insertions(+)
+ create mode 100644 estilos.css
+PS C:\Users\ANDAP\desktop\FULL STACK\Git>
+
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> GIT DIFF
+fatal: cannot handle DIFF as a builtin
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git diff
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git diff
+diff --git a/Proyecto con Git.html b/Proyecto con Git.html
+index 35e0595..f8746dd 100644
+--- a/Proyecto con Git.html
++++ b/Proyecto con Git.html
+@@ -6,6 +6,21 @@
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+ </head>
+ <body>
++       <div id="fila1">
++               <div id="fila1izq" class="flotarizquierda">
++                       <div>
++                               <a>Modules</a>
++                       </div>
++                       <div>
++                               <a>Legs</a>
++                       </div>
++                       <div>
++                               <a>Add-ons</a>
++                       </div>
++                       <div>
++                               <a>...</a>
++                       </div>
++               </div>
+
+ </body>
+ </html>
+\ No newline at end of file
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add '.\Proyecto con Git.html'
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git diff
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git diff
+diff --git a/Proyecto con Git.html b/Proyecto con Git.html
+index f8746dd..ee8a982 100644
+--- a/Proyecto con Git.html
++++ b/Proyecto con Git.html
+@@ -6,21 +6,6 @@
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+ </head>
+ <body>
+-       <div id="fila1">
+-               <div id="fila1izq" class="flotarizquierda">
+-                       <div>
+-                               <a>Modules</a>
+-                       </div>
+-                       <div>
+-                               <a>Legs</a>
+-                       </div>
+-                       <div>
+-                               <a>Add-ons</a>
+-                       </div>
+-                       <div>
+-                               <a>...</a>
+-                       </div>
+-               </div>
+-
++
+ </body>
+ </html>
+\ No newline at end of file
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git diff --cached
+diff --git a/Proyecto con Git.html b/Proyecto con Git.html
+index 35e0595..f8746dd 100644
+--- a/Proyecto con Git.html
++++ b/Proyecto con Git.html
+@@ -6,6 +6,21 @@
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+ </head>
+ <body>
++       <div id="fila1">
++               <div id="fila1izq" class="flotarizquierda">
++                       <div>
++                               <a>Modules</a>
++                       </div>
++                       <div>
++                               <a>Legs</a>
++                       </div>
++                       <div>
++                               <a>Add-ons</a>
++                       </div>
++                       <div>
++                               <a>...</a>
++                       </div>
++               </div>
+
+ </body>
+ </html>
+\ No newline at end of file
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git log
+commit d37037272e808b7c0e50fc2877cd21ab6cafbb37 (HEAD -> master)
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 15:06:19 2018 -0500
+
+    Adicion de archivo de estilos y con css
+
+commit d5049f212aca51722de0f507b902ed182dfbdcf2
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 14:49:47 2018 -0500
+
+    Version Inicial de mi repositorio
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git log -p
+commit d37037272e808b7c0e50fc2877cd21ab6cafbb37 (HEAD -> master)
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 15:06:19 2018 -0500
+
+    Adicion de archivo de estilos y con css
+
+diff --git a/Proyecto con Git.html b/Proyecto con Git.html
+index 74c04a4..35e0595 100644
+--- a/Proyecto con Git.html
++++ b/Proyecto con Git.html
+@@ -3,6 +3,7 @@
+ <head>
+        <title>Modulesclonada</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
++       <link rel="stylesheet" type="text/css" href="estilos.css">
+ </head>
+ <body>
+
+diff --git a/estilos.css b/estilos.css
+new file mode 100644
+index 0000000..03819c6
+--- /dev/null
++++ b/estilos.css
+@@ -0,0 +1 @@
++p{color: red}
+
+commit d5049f212aca51722de0f507b902ed182dfbdcf2
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 14:49:47 2018 -0500
+
+    Version Inicial de mi repositorio
+
+diff --git a/Proyecto con Git.html b/Proyecto con Git.html
+new file mode 100644
+index 0000000..74c04a4
+--- /dev/null
++++ b/Proyecto con Git.html
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html>
++<head>
++       <title>Modulesclonada</title>
++       <link rel="stylesheet" type="text/css" href="styles/style.css">
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git commit -m
+error: switch `m' requires a value
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git log
+commit d37037272e808b7c0e50fc2877cd21ab6cafbb37 (HEAD -> master)
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 15:06:19 2018 -0500
+
+    Adicion de archivo de estilos y con css
+
+commit d5049f212aca51722de0f507b902ed182dfbdcf2
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 14:49:47 2018 -0500
+
+    Version Inicial de mi repositorio
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git commit
+[master 51df22a] Segunda version
+ 1 file changed, 15 insertions(+)
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git log
+commit 51df22ad34ca1640d9eed17e47117e946be7d0a9 (HEAD -> master)
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 16:05:07 2018 -0500
+
+    Segunda version
+
+commit d37037272e808b7c0e50fc2877cd21ab6cafbb37
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 15:06:19 2018 -0500
+
+    Adicion de archivo de estilos y con css
+
+commit d5049f212aca51722de0f507b902ed182dfbdcf2
+Author: Luis Samudio <luis27sam@hotmail.com>
+Date:   Fri Sep 21 14:49:47 2018 -0500
+
+    Version Inicial de mi repositorio
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git checkout d37037272e808b7c0e50fc2877cd21ab6cafbb37
+Note: checking out 'd37037272e808b7c0e50fc2877cd21ab6cafbb37'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at d370372 Adicion de archivo de estilos y con css
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git remote -v
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git remote add origin https://github.com/luis27sam/pruebasgitnube.git
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git remote -v
+origin  https://github.com/luis27sam/pruebasgitnube.git (fetch)
+origin  https://github.com/luis27sam/pruebasgitnube.git (push)
+PS C:\Users\ANDAP\desktop\FULL STACK\Git>
+______________________________________________________________________________
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git status
+HEAD detached at d370372
+nothing to commit, working tree clean
+PS C:\Users\ANDAP\desktop\FULL STACK\Git> git push origin master
+remote: Permission to luis27sam/pruebasgitnube.git denied to chrcpc87.
+fatal: unable to access 'https://github.com/luis27sam/pruebasgitnube.git/': The requested URL returned error: 403
+PS C:\Users\ANDAP\desktop\FULL STACK\Git>  git push origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 1.02 KiB | 1.02 MiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/luis27sam/pruebasgitnube/pull/new/master
+remote:
+To https://github.com/luis27sam/pruebasgitnube.git
+ * [new branch]      master -> master
+PS C:\Users\ANDAP\desktop\FULL STACK\Git>

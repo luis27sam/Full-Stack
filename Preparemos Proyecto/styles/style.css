@@ -1,0 +1,53 @@
+#fila1{
+	height: 120px
+}
+
+#fila1{
+	height: 80px;
+	background-color: gray;
+}
+
+#fila1>div{
+	border: 1px solid black; display: inline;
+}
+
+#fila1izq>div{
+	border: 1px solid black; display: inline;
+}
+
+.flotarizquierda{
+	float: left;
+
+}
+
+.flotarderecha{float: right;
+}
+
+.centrar{
+	position: relative;
+	left: 50%;
+}
+
+#fila2>div{
+	display: inline-block;
+}
+
+#fila2{
+	height: 400px;
+}
+
+#cabecera{
+	margin: 0%;
+	padding: 0%;
+	width: 30%;
+}
+
+#fondofila2{
+	margin: 0%;
+	padding: 0%;
+	width: 69%;
+	height: 100%;
+	background-image: url("../imagenes/imagenfila2.png");
+	background-color: rgb();
+}
+
