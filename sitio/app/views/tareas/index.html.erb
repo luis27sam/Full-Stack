@@ -1,0 +1,16 @@
+<h1>Mis Tareas</h1>
+<table class="table table-hover">
+		<thead class="thead-dark">
+			<th>Tarea</th>
+			<th>Editar</th>
+			<th>Eliminar</th>
+		</thead>
+	<% @tareas.each do |tarea|%>
+		<tr>
+			<td><%= link_to tarea.titulo,tarea%></td>
+			<td><%=link_to "Editar",edit_tarea_path(tarea),class: "btn btn-warning"%>
+			</td>
+			<td><%=link_to "Eliminar",tarea,method: "delete",confirm: "Estas seguro?",class: "btn btn-danger"%></td>
+		</tr>
+	<% end %>
+</table>

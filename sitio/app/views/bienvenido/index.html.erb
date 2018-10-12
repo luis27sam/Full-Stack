@@ -1,0 +1,9 @@
+<% if usuario_signed_in? %>
+<h1>Bienvenidos a mi Sitio <%= current_usuario.email %></h1>
+<% else %>
+<h1>Bienvenidos</h1>
+<% end %>
+<p>Mi primer sitio en Rails</p>
+
+
+

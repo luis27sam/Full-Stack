@@ -1,0 +1,7 @@
+{
+  "name": "sesion_21",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
