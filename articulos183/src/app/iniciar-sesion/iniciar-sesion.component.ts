@@ -25,7 +25,16 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   iniciarSesion(){
-  	console.log(this.formulario);
+  	this.servicioUsuarios.
+    iniciarSesion(this.formulario).
+    subscribe(respuesta=>{
+      localStorage.setItem('sessionToken',respuesta.jwt);
+      alert('Inicio de Sesión Exitoso');
+    },error=>{
+      alert('Fallo el inicio de sesion, verifica la consola');
+      console.log(error);
+      console.log(this.formulario);
+    });
   }
 
 }

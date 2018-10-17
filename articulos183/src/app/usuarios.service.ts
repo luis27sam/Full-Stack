@@ -13,11 +13,11 @@ export class UsuariosService {
   constructor(private http:HttpClient) {
   	this.url="https://apidocumentospiensadigital.herokuapp.com";
   	this.encabezados={ headers: new HttpHeaders({
-  		'Content-Type': 'Aplication/json'
+  		'Content-Type': 'Application/json'
   	})}
   }
 
-  iniciarSesion(usuario:any):Observable{
+  iniciarSesion(usuario:any):Observable<any>{
   	return this.http.post<any>(this.url+'/user_token',usuario,this.encabezados);
   }
 
