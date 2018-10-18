@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService} from '../usuarios.service';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -11,7 +12,7 @@ export class IniciarSesionComponent implements OnInit {
 
 	formulario:any;
 
-  constructor(private servicioUsuarios:UsuariosService) { 
+  constructor(private servicioUsuarios:UsuariosService,private router:Router) { 
   	this.formulario={
   		auth: {
   			email: "",
@@ -29,6 +30,7 @@ export class IniciarSesionComponent implements OnInit {
     iniciarSesion(this.formulario).
     subscribe(respuesta=>{
       localStorage.setItem('sessionToken',respuesta.jwt);
+      this.router.navigate(['/articulos']);
       alert('Inicio de Sesión Exitoso');
     },error=>{
       alert('Fallo el inicio de sesion, verifica la consola');
